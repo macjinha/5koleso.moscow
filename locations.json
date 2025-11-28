@@ -1,0 +1,46 @@
+[
+	{
+		"name": "Объект 1",
+		"address": "Россия, Москва",
+		"area": "Район 1",
+		"phone": "79999999999",
+		"latitude": 55.88,
+		"longitude": 44.44,
+		"id": "loc-01",
+		"region": "Москва",
+		"route": "https://yandex.ru/maps/?rtext=~55.88,44.44"
+	},
+	{
+		"name": "Объект 2",
+		"address": "Россия, Москва",
+		"area": "Район 2",
+		"phone": "79999999999",
+		"latitude": 55.88,
+		"longitude": 44.44,
+		"id": "loc-02",
+		"region": "Московская область",
+		"route": "https://yandex.ru/maps/?rtext=~55.88,44.44"
+	},
+	{
+		"name": "Объект 3",
+		"address": "Россия, Москва",
+		"area": "Район 3",
+		"phone": "79999999999",
+		"latitude": 55.88,
+		"longitude": 44.44,
+		"id": "loc-03",
+		"region": "Московская область",
+		"route": "https://yandex.ru/maps/?rtext=~55.88,44.44"
+	},
+	{
+		"name": "Объект 4",
+		"address": "Россия, Москва",
+		"area": "Район 4",
+    "phone": "79999999999",
+		"latitude": 55.88,
+		"longitude": 44.44,
+		"id": "loc-04",
+		"region": "Москва",
+		"route": "https://yandex.ru/maps/?rtext=~55.88,44.44"
+	}
+]

@@ -1,0 +1,334 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<title>5 Колесо | Шиномонтаж</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div
+			class="promo-popup hidden"
+			id="promoPopup"
+			role="dialog"
+			aria-modal="true"
+			aria-labelledby="promoTitle"
+		>
+			<button
+				type="button"
+				class="promo-popup__close"
+				id="closePromoBtn"
+				aria-label="Закрыть баннер"
+			></button>
+			<img src="promo.jpg" alt="Акция 5 Колесо" class="promo-popup__image" />
+		</div>
+		<button
+			type="button"
+			class="promo-button"
+			id="promoButton"
+			aria-controls="promoPopup"
+			aria-expanded="false"
+		>
+			Акция!
+		</button>
+
+		<header class="hero" id="top">
+			<div class="hero__overlay">
+				<div class="container hero__content">
+					<img src="img/logo.png" alt="5 Колесо" class="hero__logo" />
+					<p>Работаем по Москве и области круглосуточно</p>
+					<div class="hero__actions">
+						<a
+							class="btn btn--primary"
+							href="https://example.com"
+							target="_blank"
+							rel="noopener"
+							>Записаться онлайн</a
+						>
+						<a
+							class="btn btn--primary"
+							href="https://example.com"
+							target="_blank"
+							rel="noopener"
+							>Прайс лист</a
+						>
+						<a class="btn btn--secondary" href="tel:+79999999999">Позвонить</a>
+						<a
+							class="btn btn--ghost"
+							href="https://telegram.org"
+							target="_blank"
+							rel="noopener"
+							>Telegram-бот</a
+						>
+					</div>
+					<div class="hero__socials">
+						<a
+							href="https://vk.com"
+							target="_blank"
+							rel="noopener"
+							>VK</a
+						>
+						<a
+							href="https://www.youtube.com"
+							target="_blank"
+							rel="noopener"
+							>YouTube</a
+						>
+						<a
+							href="https://rutube.ru/"
+							target="_blank"
+							rel="noopener"
+							>RuTube</a
+						>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<section class="panel-gallery">
+				<div class="container panel-container">
+					<article
+						class="panel active"
+						style="--panel-image: url('img/img01.jpg');"
+					>
+						<!--<h3>1</h3>
+                    <p>1.</p> -->
+					</article>
+					<article class="panel" style="--panel-image: url('img/img02.jpg');">
+						<!--<h3>1</h3>
+                    <p>1.</p> -->
+					</article>
+					<article class="panel" style="--panel-image: url('img/img04.jpg');">
+						<!--<h3>1</h3>
+                    <p>1.</p> -->
+					</article>
+					<article class="panel" style="--panel-image: url('img/img05.jpg');">
+						<!--<h3>1</h3>
+                    <p>1.</p> -->
+					</article>
+				</div>
+			</section>
+
+			<section class="locations" id="locations">
+				<div class="container">
+					<div class="locations__header">
+						<div>
+							<h2>Локации «5 Колесо»</h2>
+							<p>
+								Найдите ближайший сервис или уточните контакты нужной точки.
+								Пользуйтесь строкой поиска по названию, адресу или телефону.
+							</p>
+							<p>
+								Обращаем ваше внимание, что с 22:00 до 07:00 стоимость работ
+								выше на 22%!
+							</p>
+						</div>
+						<div class="locations__stats">
+							Найдено <span data-location-count>0</span> объектов
+						</div>
+					</div>
+
+					<div class="locations__search">
+						<label class="search-input">
+							<span class="search-input__icon" aria-hidden="true"></span>
+							<input
+								type="search"
+								id="objectSearch"
+								placeholder="Поиск по названию, адресу или телефону"
+							/>
+						</label>
+					</div>
+
+					<div class="locations__board">
+						<div class="objects-empty hidden" id="objectsEmpty">
+							По запросу ничего не найдено. Попробуйте изменить критерии.
+						</div>
+						<div class="objects-list" id="objectsList"></div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section accordion-section" id="prices">
+				<div class="container">
+					<div class="accordion">
+						<button
+							type="button"
+							class="accordion-btn"
+							data-accordion="pricing"
+						>
+							Прайс-лист
+						</button>
+						<div class="accordion-content" id="pricingAccordion">
+							<div class="pricing-tabs" role="tablist">
+								<button
+									class="pricing-tab active"
+									data-tab="sedan"
+									role="tab"
+									aria-selected="true"
+								>
+									Легковые
+								</button>
+								<button
+									class="pricing-tab"
+									data-tab="suv"
+									role="tab"
+									aria-selected="false"
+								>
+									Кроссоверы и SUV
+								</button>
+								<button
+									class="pricing-tab"
+									data-tab="gaz"
+									role="tab"
+									aria-selected="false"
+								>
+									Газель, Соболь, УАЗ
+								</button>
+							</div>
+							<div class="pricing-links">
+								<a
+									class="btn btn--ghost pricing-bundle-link"
+									href="/price.pdf"
+									target="_blank"
+									rel="noopener"
+									>Пакетные тарифы</a
+								>
+							</div>
+
+							<div class="tab-content sedan active" role="tabpanel">
+								<div class="diameter-selector">
+									<label
+										>Диаметр колеса:
+										<span class="diameter-value">16</span>R</label
+									>
+									<input
+										type="range"
+										class="slider sedan-slider"
+										min="14"
+										max="20"
+										value="16"
+									/>
+								</div>
+								<table class="price-table">
+									<thead>
+										<tr>
+											<th>Услуга</th>
+											<th>Цена</th>
+										</tr>
+									</thead>
+									<tbody></tbody>
+								</table>
+							</div>
+
+							<div class="tab-content suv" role="tabpanel">
+								<div class="diameter-selector">
+									<label
+										>Диаметр колеса:
+										<span class="diameter-value">18</span>R</label
+									>
+									<input
+										type="range"
+										class="slider suv-slider"
+										min="17"
+										max="22"
+										value="18"
+									/>
+								</div>
+								<table class="price-table">
+									<thead>
+										<tr>
+											<th>Услуга</th>
+											<th>Цена</th>
+										</tr>
+									</thead>
+									<tbody></tbody>
+								</table>
+							</div>
+
+							<div class="tab-content gaz" role="tabpanel">
+								<div class="diameter-selector">
+									<label
+										>Диаметр колеса:
+										<span class="diameter-value">19</span>R</label
+									>
+									<input
+										type="range"
+										class="slider gaz-slider"
+										min="17"
+										max="24"
+										value="19"
+									/>
+								</div>
+								<table class="price-table">
+									<thead>
+										<tr>
+											<th>Услуга</th>
+											<th>Цена</th>
+										</tr>
+									</thead>
+									<tbody></tbody>
+								</table>
+							</div>
+						</div>
+
+						<button
+							type="button"
+							class="accordion-btn"
+							data-accordion="corporate"
+						>
+							Для корпоративных клиентов
+						</button>
+						<div class="accordion-content" id="corporateAccordion">
+							<div class="accordion-text">
+								<p>
+									Обслуживаем корпоративные автопарки, строим индивидуальные
+									графики и предоставляем полный комплект документов. Работаем с
+									логистикой, строительными и торговыми компаниями.
+								</p>
+								<ul class="advantage-list">
+									<li class="advantage-item">Персональный менеджер.</li>
+									<li class="advantage-item">
+										Безналичная оплата, закрывающие документы в срок.
+									</li>
+									<li class="advantage-item">
+										Сезонное хранение и учет комплектов.
+									</li>
+									<li class="advantage-item">
+										Скидки до 10% при регулярном обслуживании.
+									</li>
+								</ul>
+								<p class="accordion-cta">
+									Менеджер по работе с юридическими лицами:
+									<a href="tel:+79999999999">+7 (999) 999-99-99</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="container footer__inner">
+				<div class="footer__brand">
+					<img src="img/logo_white.png" alt="5 Колесо" />
+					<p>© 5 Колесо.<br />«5 Колесо». Торговая марка №499282.</p>
+				</div>
+				<div class="footer__contacts">
+					<a href="tel:+79999999999">+7 999 999 99 99</a>
+					<a href="mailto:example@example.com">example@example.com</a>
+				</div>
+			</div>
+		</footer>
+
+		<script src="main.js" defer></script>
+		<script src="script.js" defer></script>
+	</body>
+</html>
